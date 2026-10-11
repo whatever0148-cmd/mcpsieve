@@ -1,6 +1,6 @@
 {
-  "name": "mcpsieve",
-  "version": "1.0.0",
+  "name": "@ahmedahx/mcpsieve",
+  "version": "1.0.4",
   "description": "Search-and-invoke proxy that replaces hundreds of MCP tool schemas with two meta-tools, cutting context-window token usage by ~99%.",
   "main": "dist/index.js",
   "scripts": {
