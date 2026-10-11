@@ -1,0 +1,58 @@
+{
+  "name": "mcpsieve",
+  "version": "1.0.0",
+  "description": "Search-and-invoke proxy that replaces hundreds of MCP tool schemas with two meta-tools, cutting context-window token usage by ~99%.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsup src/index.ts src/cli.ts --format esm --dts --clean",
+    "dev": "tsup src/index.ts src/cli.ts --format esm --watch",
+    "typecheck": "tsc --noEmit",
+    "benchmark": "node scripts/benchmark.mjs",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "proxy",
+    "bm25",
+    "tokens",
+    "context-window",
+    "llm",
+    "claude",
+    "cursor"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  },
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "mcpsieve": "./dist/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatever0148-cmd/mcpsieve.git"
+  },
+  "homepage": "https://github.com/whatever0148-cmd/mcpsieve#readme",
+  "bugs": {
+    "url": "https://github.com/whatever0148-cmd/mcpsieve/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  }
+}
